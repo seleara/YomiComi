@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Yomu">
+    <SolidColorBrush x:Key="YomuForegroundBrush" Color="#ffe6e6e6" />
+    <SolidColorBrush x:Key="YomuDimForegroundBrush" Color="#ff999999" />
+    <SolidColorBrush x:Key="YomuControlBackgroundBrush" Color="#ff555555" />
+    <SolidColorBrush x:Key="YomuControlBorderBrush" Color="#ff222222" />
+    <!--<ImageBrush x:Key="YomuWindowBackgroundImageBrush" ImageSource="grad_noise.png" />-->
+    <LinearGradientBrush x:Key="YomuWindowBackgroundImageBrush" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Color="#2c2c2c" Offset="0" />
+            <GradientStop Color="#3e3e3e" Offset="0.5" />
+            <GradientStop Color="#2c2c2c" Offset="1" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <Path x:Key="YomuIcon" Fill="{StaticResource YomuForegroundBrush}" Data="M20,0 L0,0 L0,20 L13,20 L16,16 L4,16 L4,4 L17,4 L20,0z" />
+</ResourceDictionary>

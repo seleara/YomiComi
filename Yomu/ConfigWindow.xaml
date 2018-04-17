@@ -1,0 +1,30 @@
+﻿<Window x:Class="Yomu.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yomu"
+        mc:Ignorable="d"
+        Title="ConfigWindow" Height="300" Width="300" WindowStyle="ToolWindow" ResizeMode="NoResize" Style="{StaticResource YomuWindow}">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:Commands.Quit" Executed="Quit_Executed" />
+        <CommandBinding Command="local:Commands.Maximize" Executed="Maximize_Executed" />
+        <CommandBinding Command="local:Commands.Minimize" Executed="Minimize_Executed" />
+    </Window.CommandBindings>
+    <Border Padding="4">
+        <DockPanel>
+            <TabControl>
+                <TabItem Header="Input">
+                    <GroupBox Header="Scrolling">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Drag speed" />
+                                <TextBox Width="40" Text="{Binding Path=DragSpeed, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+    </Border>
+</Window>
