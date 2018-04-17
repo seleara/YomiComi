@@ -1,4 +1,4 @@
-# Yomu
+# YomiComi
 
 A simple comic/manga reader application.
 
